@@ -1,0 +1,153 @@
+/*index.html styles*/
+
+/*Reset default browser margin*/
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background-color: #fffdf9;
+    color: #333;
+}
+
+/*Header background*/
+#site-header {
+    background-color: orangered;
+    width: 100%;
+}
+
+/*Flex container*/
+#site-header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    min-height: 80px;
+}
+
+#sitelogo img{
+    width: clamp(100px, 8vw, 200px);
+    height: auto;
+    display: block;
+    
+}
+
+/*Main Navigation*/
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    white-space: nowrap;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+.header-nav a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.header-nav a.active {
+    font-weight: 700;
+    border-bottom: 2px solid #fff;
+    color: #000;
+}
+
+/*Responsive Header*/
+@media (max-width: 768px) {
+    #site-header .header-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        white-space: normal;
+    }
+}
+
+/*Responsive Header Logo*/
+@media (max-width: 768px) {
+    #sitelogo img {
+        width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sitelogo img {
+        width: 110px;
+    }
+}
+
+/*Image Banner*/
+#image-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Product Navigation*/
+.product-category {
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+}
+
+.product-category ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product-category a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: x-large;
+    padding: 4px;
+}
+
+.product-category li {
+    position: relative;
+}
+.product-category li:not(:last-child)::after {
+    content: "|";
+    font-size: x-large;
+    margin-left: 1.5rem;
+    color: #aaa;
+    display: inline-flex;
+    align-items: center;
+}
+
+.product-category a:hover {
+    background: #ffe4d1;
+    color: #d32f2f;
+}
+
+/*Footer*/
+#site-footer {
+    background-color: orangered;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1rem solid #fff;
+}
+
+/*Common section Padding*/
+section {
+    padding: 2rem 1rem;
+}
+
